@@ -166,5 +166,9 @@ function bobthefish_display_colors -a color_scheme -d 'Print example prompt colo
   echo -ns $k8s_glyph ' k8s-context'
   __bobthefish_finish_segments
 
+  __bobthefish_start_segment $color_podman
+  echo -ns $podman_glyph ' podman'
+  __bobthefish_finish_segments
+
   echo -e "\n"
 end

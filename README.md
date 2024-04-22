@@ -196,6 +196,10 @@ This feature is disabled by default. Use `yes` to show the current Kubernetes co
 
 This feature is disabled by default. Use `yes` to show the current Kubernetes namespace.
 
+#### `set -g theme_display_podman yes`
+
+This feature is disabled by default. Use `yes` to show the current podman remote connection name.
+
 #### `set -g theme_display_aws_vault_profile yes`
 
 This feature is disabled by default. Use `yes` to show the currently executing [AWS Vault](https://github.com/99designs/aws-vault) profile.

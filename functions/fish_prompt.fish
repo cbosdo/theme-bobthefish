@@ -646,6 +646,16 @@ function __bobthefish_prompt_k8s_context -S -d 'Show current Kubernetes context'
     echo -ns $segment ' '
 end
 
+function __bobthefish_prompt_podman -S -d 'Show current podman connection'
+    [ "$theme_display_podman" = 'yes' ]
+    or return
+
+    [ -z "$CONTAINER_CONNECTION" ]
+    and return
+
+    __bobthefish_start_segment $color_podman
+    echo -ns $podman_glyph ' ' $CONTAINER_CONNECTION ' '
+end
 
 # ==============================
 # Cloud Tools
@@ -1294,6 +1304,7 @@ function fish_prompt -d 'bobthefish, a fish theme optimized for awesome'
     __bobthefish_prompt_vagrant
     __bobthefish_prompt_docker
     __bobthefish_prompt_k8s_context
+    __bobthefish_prompt_podman
 
     # Cloud Tools
     __bobthefish_prompt_aws_vault_profile
